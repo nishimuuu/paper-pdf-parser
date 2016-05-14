@@ -1,0 +1,6 @@
+require 'pathname'
+lib = Pathname.new(__FILE__).dirname.join('..','lib/paper/pdf').expand_path.to_s
+$:.unshift lib
+require 'parser'
+PaperPdfParser::CLI.start
+
