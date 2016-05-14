@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.name          = "paper-pdf-parser"
   spec.version       = Paper::Pdf::Parser::VERSION
   spec.authors       = ["Takahiro Nishimura"]
-  spec.email         = ["takahiro_nishimura@r.recruit.co.jp"]
+  spec.email         = ["tkhr.nishimura@gmail.com"]
 
   spec.summary       = %q{Fetch citation list to parse paper pdf }
   spec.description   = %q{All paper certainly has citation list. However it is hard to extract reference list cuz part of citation list locate lowest part in pdf and all browser is so slow to show pdf file of paper that we get tired to fetch paper. Moreover using pdftohtml or pdftotext, this command cannnot parse multi-column pdf. I develop suitablly-parse multi-column pdf file and fetch citation list.}
