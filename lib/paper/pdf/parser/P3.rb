@@ -11,7 +11,7 @@ class P3
   REFERENCE_REGEXP = Regexp.new('(\[[0-9]?[0-9]\]|\[.+?\])')
 
   def self.makeId
-    return Digest::SHA256.hexdigest Time.now.strftime('%F %H:%M:%S')
+    return Digest::SHA256.hexdigest Time.now.strftime('%F %H:%M:%S:%N')
   end
 
   def self.makeDir(id, work_dir)
@@ -31,7 +31,7 @@ class P3
   end
 
   def self.getK2Pdf(id, work_dir, use_dir)
-    if use_dir
+    if use_dir || use_dir.nil?
       return "#{work_dir}/#{id}/output_k2opt.pdf"
     else
       return "#{work_dir}/#{id}-output_k2opt.pdf"
